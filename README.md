@@ -1,4 +1,0 @@
-Rubik-Robot
-===========
-
-Project 
