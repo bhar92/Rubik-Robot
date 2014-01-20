@@ -1,7 +1,12 @@
+# This program snaps an image when you left click on the window
+# In order to obtain the image, we are using an Android phone running the IP Webcam app
+# You can download the app from https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en
+# WARNING: The webcam MUST be used in 640x480 resolution or the program WILL NOT WORK
+
 from SimpleCV import JpegStreamCamera, Display
-# Initialize the webcam by providing URL to the camera
 
 def DrawSquare(pic, centerPoint, sideLength):
+	# This function draws a square in the display
 	boxWidth = sideLength
 	boxHeight = boxWidth
 	centerPointX = centerPoint[0]
@@ -12,7 +17,8 @@ def DrawSquare(pic, centerPoint, sideLength):
 	return
 
 windowSize = (640,480)
-cam = JpegStreamCamera("http://192.168.2.100:8080/video?submenu=mjpg")
+# Initialize the webcam by providing URL to the camera
+cam = JpegStreamCamera("http://192.168.2.100:8080/video?submenu=mjpg") 
 i = 1
 display = Display(windowSize)
 img = cam.getImage()
