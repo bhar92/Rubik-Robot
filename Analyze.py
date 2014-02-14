@@ -18,7 +18,7 @@ def PrintStickerColorOnImg(stickerColors):
 	return
 
 
-img = Image("SquareCube.jpg") # Obtain image with cube within the red square
+img = Image("SquareCube1.jpg") # Obtain image with cube within the red square
 test = {}			# Dictionary containing difference images of a particular sticker and standard colors 
 pixValues = []		# List containing the pixel values from (20,50) to (20,80) of each image present in test
 averagesDict = {}	# Dictionary containing the average of pixValues corresponding to each color

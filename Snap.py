@@ -18,7 +18,7 @@ def DrawSquare(pic, centerPoint, sideLength):
 
 windowSize = (640,480)
 # Initialize the webcam by providing URL to the camera
-cam = JpegStreamCamera("http://192.168.2.100:8080/video?submenu=mjpg") 
+cam = JpegStreamCamera("http://192.168.2.103:8080/video?submenu=mjpg") 
 i = 1
 display = Display(windowSize)
 img = cam.getImage()
