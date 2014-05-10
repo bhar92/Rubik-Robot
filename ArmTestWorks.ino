@@ -22,6 +22,7 @@ void setup(){
     myStepper.setSpeed(60);    // set speed to 30 rpm
     pinMode(enPin, OUTPUT);
     digitalWrite(enPin, LOW);
+    //digitalWrite(enPin, HIGH);
     Serial.begin(9600);  
 }
 
@@ -29,7 +30,7 @@ void loop() {
     char c = Serial.read();
     
     if(c == 'd'){
-        myservo.write(180);
+        myservo.write(172);
         delay(15);  
     }
     
@@ -41,11 +42,27 @@ void loop() {
     if(c == 'l'){
         digitalWrite(enPin, HIGH);
         myStepper.step(55);
+        myStepper.step(-5);        
+        delay(500);
+    }
+    
+    if(c == 'a'){
+        digitalWrite(enPin, HIGH);
+        myStepper.step(45);
+        delay(500);
+    }
+    
+     if(c == 'b'){
+        digitalWrite(enPin, HIGH);
+        myStepper.step(-45);
+        delay(500);
     }
     
     if(c == 'r'){
         digitalWrite(enPin, HIGH);
         myStepper.step(-55);
+        myStepper.step(5);
+        delay(500);
     }
     
     if(c == 'f'){
@@ -58,39 +75,38 @@ void loop() {
   
     digitalWrite(enPin, LOW);
 } 
-
 void feetForward(void){
-  myservo10.write(60);
-  myservo11.write(180-70);
-  delay(250);
+  myservo10.write(68);
+  myservo11.write(180-68);
+  delay(150);
 }  
 
 void feetBackward(void){
   myservo10.write(90);
   myservo11.write(180-90);
-  delay(250);
+  delay(150);
 }  
 
 
 void armUp(void){
   myservo9.write(80);
-  delay(250);
+  delay(150);
 }  
 
 void armDown(void){
-  myservo9.write(120);
-  delay(250);
+  myservo9.write(110);
+  delay(150);
 }
 
 
 void flick(void){
-  for(int i = 120; i > 81; i--)
+  for(int i = 110; i > 81; i--)
   {
     myservo9.write(i);
-    delay(10);
+    delay(20);
   }
   
-  delay(1000);
+  delay(400);
 }
 
 
