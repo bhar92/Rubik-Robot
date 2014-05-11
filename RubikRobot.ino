@@ -62,6 +62,34 @@ void loop(){
               Serial.println("Move B");
               move_B();              
             }
+            
+            if(Move == "M"){
+              Serial.println("Move M");
+              move_M();              
+            }
+            
+             
+            if(Move == "M2"){
+              Serial.println("Move M2");
+              move_M2();              
+            }
+            
+             
+            if(Move == "M'"){
+              Serial.println("Move M'");
+              move_Minv();              
+            }
+            
+            if(Move == "L2"){
+              Serial.println("Move L2");
+              move_L2();              
+            }
+            
+            
+            if(Move == "R2"){
+              Serial.println("Move L2");
+              move_L2();              
+            }            
 
             if(Move == "L'"){
               Serial.println("Move L'");
@@ -142,6 +170,52 @@ void move_L(){
     Serial.println("Move L done");
 }
 
+/*----------move L2-----------------*/
+void move_L2(){
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();
+    
+      
+    while(!(Serial.available()));
+    Serial.read();
+    flip(); 
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();    
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+    
+    Serial.println("Move L done");
+}
+
 /*----------move R-----------------*/
 void move_R(){
     while(!(Serial.available()));
@@ -182,6 +256,53 @@ void move_R(){
     
     Serial.println("Move R done");
 }
+
+
+/*----------move R2-----------------*/
+void move_R2(){
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();
+        
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();
+    
+    Serial.println("Move R done");
+}
+
 
 /*----------move U-----------------*/
 void move_U(){
@@ -321,6 +442,210 @@ void move_B(){
     
     Serial.println("Move B done");
 }
+
+/*----------move M-----------------*/
+void move_M(){
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();    
+      
+    while(!(Serial.available()));
+    Serial.read();
+    flip(); 
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();    
+        
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();    
+        
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+        
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    /*while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    */
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+    
+    Serial.println("Move M done");
+}
+
+void move_M2(){
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();    
+      
+    while(!(Serial.available()));
+    Serial.read();
+    flip(); 
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight(); 
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();    
+        
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft(); 
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft(); 
+  
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();    
+        
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();  
+
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+       
+   
+    
+    /*while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+    */
+    Serial.println("Move M2 done");
+}
+/*----------move M'-----------------*/
+void move_Minv(){
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();    
+      
+    while(!(Serial.available()));
+    Serial.read();
+    flip(); 
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();    
+        
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    holderDown();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    baseLeft();    
+        
+    while(!(Serial.available()));
+    Serial.read();
+    holderUp();
+        
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    /*while(!(Serial.available()));
+    Serial.read();
+    flip();
+    
+    while(!(Serial.available()));
+    Serial.read();
+    flip();
+    */
+    while(!(Serial.available()));
+    Serial.read();
+    baseRight();
+    
+    Serial.println("Move M' done");
+}
+
 
 /*----------move L inv-----------------*/
 void move_Linv(){
